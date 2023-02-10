@@ -2,9 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 8080;
-require("dotenv").config();
 const { PORT, REACT_APP_API_KEY } = process.env;
+require("dotenv").config();
 
 app.use(cors());
 
@@ -34,6 +33,6 @@ app.get("/", (req, res) => {
     });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
